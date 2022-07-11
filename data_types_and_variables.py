@@ -12,17 +12,24 @@ total_payment = 400*6 + 380*4 + 350*10
 
 # 3. A student can be enrolled to a class only if the class is not full and the class schedule does not 
 # conflict with her current schedule.
-enrolled if class_not_full == true AND no_schedule_conflict == true
+# enrolled if class_not_full == true and no_schedule_conflict == true
 
 # 4. A product offer can be applied only if people buys more than 2 items, and the offer has not expired. 
 # Premium members do not need to buy a specific amount of products
-offer if premium member or (bought > 2 AND offer_not_expired == true)
+# offer if premium member or (bought > 2 and offer_not_expired == true)
 
 # 5. Create a variable that holds a boolean value for each of the following conditions:
 
-        # the password must be at least 5 characters
-        long_enough = len(password) > 5
-        # the username must be no more than 20 characters
-        not_too_long = len(username) <= 20
-        # the password must not be the same as the username
-        not_same = password != username
+username = 'codeup'
+password = 'notastrongpassword'
+
+# the password must be at least 5 characters
+long_enough = len(password) >= 5
+# the username must be no more than 20 characters
+not_too_long = len(username) <= 20
+# the password must not be the same as the username
+not_same = password != username
+        
+print('Password 5 characters or more? ' + str(long_enough))
+print('Username 20 characters or less? ' + str(not_too_long))
+print('Password different than username? ' + str(not_same))
